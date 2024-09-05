@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: ecd122u4j-python
+  janus-idp.io/tekton: ecd122u4j-python
+  backstage.io/kubernetes-id: ecd122u4j-python
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: ecd122u4j-python
+resources:
+- deployment.yaml
+- route.yaml
+- service.yaml
